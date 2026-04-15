@@ -2,14 +2,26 @@
 layout: page
 permalink: /teaching/
 title: teaching
-description: Course materials, schedules, and resources for classes taught.
+description:
 nav: true
-nav_order: 6
-calendar: true
+nav_order: 3
 ---
 
-This page displays a collection of courses with detailed schedules, materials, and resources. You can organize your courses by years, terms, or topics.
+## Columbia Business School
 
-{% include calendar.liquid calendar_id='test@gmail.com' timezone='Asia/Shanghai' %}
+| Course | Role | Term |
+|--------|------|------|
+| Analytical Models (PhD) | Teaching Assistant | Spring 2025 |
+| Empirical Models (PhD) | Teaching Assistant | Spring 2025 |
+| Marketing Analytics | Teaching Assistant | Fall 2024, Fall 2025 |
+| Digital Marketing | Teaching Assistant | Fall 2022 |
+| Statistical Modeling and Decision Making | Teaching Assistant | Fall 2022 |
+| Pricing Strategy | Teaching Assistant | Spring 2022, Spring 2023 |
 
-{% include courses.liquid %}
+---
+
+## National Taiwan University
+
+| Course | Role | Term |
+|--------|------|------|
+| Applied Statistics | Teaching Assistant & Instructor of Recitation Class | Fall 2016 – Spring 2018 |
