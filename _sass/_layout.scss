@@ -4,6 +4,10 @@
 
 @use "variables" as v;
 
+html {
+  font-size: 17px;
+}
+
 body {
   padding-bottom: 70px;
   color: var(--global-text-color);
@@ -38,6 +42,19 @@ body.sticky-bottom-footer {
   img {
     width: 100%;
   }
+}
+
+// Page title styling
+.post-header {
+  margin-bottom: 2.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--global-divider-color);
+}
+
+.post-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
 }
 
 // Content layout uses Bootstrap's grid system with responsive columns

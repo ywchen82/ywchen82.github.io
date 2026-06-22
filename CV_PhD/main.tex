@@ -1,351 +1,289 @@
-%-------------------------
-% Resume in Latex
-% Author : Jake Gutierrez
-% Based off of: https://github.com/sb2nov/resume
-% License : MIT
-%------------------------
+\documentclass[12pt, letterpaper]{article}
 
-\documentclass[letterpaper,11pt]{article}
-
-\usepackage{latexsym}
-\usepackage[empty]{fullpage}
-\usepackage{titlesec}
-\usepackage{marvosym}
-\usepackage[usenames,dvipsnames]{color}
-\usepackage{verbatim}
+\usepackage[T1]{fontenc}
+\usepackage{palatino}
+\usepackage[top=0.85in, bottom=1in, left=1in, right=1in, headheight=14pt]{geometry}
+\usepackage{fancyhdr}
 \usepackage{enumitem}
 \usepackage[hidelinks]{hyperref}
-\usepackage{fancyhdr}
-\usepackage[english]{babel}
+\usepackage{array}
 \usepackage{tabularx}
-\input{glyphtounicode}
+\usepackage{microtype}
+\usepackage{titlesec}
 
-
-%----------FONT OPTIONS----------
-% sans-serif
-% \usepackage[sfdefault]{FiraSans}
-% \usepackage[sfdefault]{roboto}
-% \usepackage[sfdefault]{noto-sans}
-% \usepackage[default]{sourcesanspro}
-
-% serif
-% \usepackage{CormorantGaramond}
-% \usepackage{charter}
-
-
+% Running header: name left, page number right, no rule
 \pagestyle{fancy}
-\fancyhf{} % clear all header and footer fields
-\fancyfoot{}
+\fancyhf{}
+\fancyhead[L]{\textit{Yi-Wen (Penny) Chen}}
+\fancyhead[R]{\thepage}
 \renewcommand{\headrulewidth}{0pt}
-\renewcommand{\footrulewidth}{0pt}
 
-% Adjust margins
-\addtolength{\oddsidemargin}{-0.5in}
-\addtolength{\evensidemargin}{-0.5in}
-\addtolength{\textwidth}{1in}
-\addtolength{\topmargin}{-.5in}
-\addtolength{\textheight}{1.0in}
-
-\urlstyle{same}
-
-\raggedbottom
-\raggedright
-\setlength{\tabcolsep}{0in}
-
-% Sections formatting
-\titleformat{\section}{
-  \vspace{-1pt}\bfseries\scshape\raggedright\large
-}{}{0em}{}[\color{black}\titlerule \vspace{-4pt}]
-
-% Ensure that generate pdf is machine readable/ATS parsable
-\pdfgentounicode=1
-
-%-------------------------
-% Custom commands
-\newcommand{\resumeItem}[1]{
-  \item{
-    {#1 \vspace{-2pt}}
-  }
+% First page: no header
+\fancypagestyle{firstpage}{%
+  \fancyhf{}%
+  \renewcommand{\headrulewidth}{0pt}%
 }
 
+% Section headings: bold, large, with rule beneath
+\titleformat{\section}
+  {\large\bfseries}
+  {}{0em}{}
+  [\vspace{2pt}\hrule\vspace{0pt}]
+\titlespacing*{\section}{0pt}{14pt}{8pt}
 
-\newcommand{\resumeSubheading}[4]{
-  \item
-    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
-      \textbf{#1} & #2 \\
-      \vspace{1.5pt}
-      \quad\small#3 & \small #4 \\
-    \end{tabular*}\vspace{-6pt}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+
+% Subsection heading within cvblock
+\newcommand{\cvsubsection}[1]{\vspace{6pt}\noindent{\bfseries #1}}
+
+% Indented content block (mirrors David Huang's indented sections)
+\newenvironment{cvblock}{%
+  \begin{list}{}{%
+    \setlength{\leftmargin}{0.35in}%
+    \setlength{\rightmargin}{0pt}%
+    \setlength{\topsep}{2pt}%
+    \setlength{\parsep}{0pt}%
+    \setlength{\itemsep}{0pt}%
+    \setlength{\partopsep}{0pt}%
+  }%
+  \item[]%
+}{%
+  \end{list}%
 }
-
-\newcommand{\resumeAwardheading}[2]{
-    \item
-    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-     #1 & #2 \\
-    \end{tabular*}\vspace{-7pt}
-}
-
-\newcommand{\resumeteachingheading}[2]{
-    \item
-    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-     #1 & #2 \\
-    \end{tabular*}\vspace{-6pt}
-}
-
-\newcommand{\resumeSubSubheading}[2]{
-    \item
-    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-      #1 & #2 \\
-    \end{tabular*}\vspace{-6pt}
-}
-
-
-\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
-
-\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
-
-\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
-\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
-\newcommand{\resumeItemListStart}{\begin{itemize}}
-\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
 
 %-------------------------------------------
-%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
 \begin{document}
+\thispagestyle{firstpage}
 
-%----------HEADING----------
-% \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-%   \textbf{\href{http://sourabhbajaj.com/}{\Large Sourabh Bajaj}} & Email : \href{mailto:sourabh@sourabhbajaj.com}{sourabh@sourabhbajaj.com}\\
-%   \href{http://sourabhbajaj.com/}{http://www.sourabhbajaj.com} & Mobile : +1-123-456-7890 \\
-% \end{tabular*}
-\begin{flushright}
-\textit{\small Updated: February 2026}
-\end{flushright}
-\begin{center}
-    \textbf{\LARGE  \scshape Yi-Wen (Penny) Chen} \\ \vspace{5pt}
- \href{mailto:YChen26@gsb.columbia.edu}{YChen26@gsb.columbia.edu} 
- % $|$ \href{https://github.com/p50042220}{\emph{github.com/p50042220}}
-\end{center}
+%---- NAME + LAST UPDATED ----
+\begin{minipage}[b]{0.70\textwidth}
+{\LARGE\bfseries Yi-Wen (Penny) Chen}
+\end{minipage}%
+\hfill
+\begin{minipage}[b]{0.28\textwidth}\raggedleft
+\footnotesize Last updated: June 2026
+\end{minipage}
 
+\vspace{16pt}
 
-%-----------EDUCATION-----------
+%---- CONTACT ----
+\begin{minipage}[t]{0.55\textwidth}
+Marketing Division\\
+Columbia Business School\\
+3022 Broadway, New York, NY 10027
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.40\textwidth}\raggedright
+\href{mailto:YChen26@gsb.columbia.edu}{YChen26@gsb.columbia.edu}\\[2pt]
+\href{https://ywchen82.github.io}{ywchen82.github.io}
+\end{minipage}
+
+\vspace{4pt}
+
+%---- EDUCATION ----
 \section{Education}
-  \resumeSubHeadingListStart
-    \resumeSubheading
-      {Columbia Business School}{2021 - 2027(expected)}
-      {Ph.D., Marketing}{New York, NY, USA}
-    \resumeSubheading
-      {Columbia Business School}{2024}
-      {M. Phil.}{New York, NY, USA}
-    \resumeSubheading
-      {National Taiwan University}{2019}
-      {M.A., Economics}{Taipei, Taiwan}
-    \resumeSubheading
-      {National Taiwan University}{2016}
-      {LL.B, Law, Minor in Political Science (International Relation Track)}{Taipei, Taiwan}
-  \resumeSubHeadingListEnd
-  
+\begin{cvblock}
+\textbf{Columbia Business School}, New York, NY, USA\\
+Ph.D., Marketing, 2021--2027 (expected).\\
+M.Phil., 2024.
+
+\medskip
+\textbf{National Taiwan University}, Taipei, Taiwan\\
+M.A., Economics, 2019.
+
+\medskip
+\textbf{National Taiwan University}, Taipei, Taiwan\\
+LL.B., Law, Minor in Political Science (International Relation Track), 2016.
+\end{cvblock}
+
+%---- RESEARCH INTERESTS ----
 \section{Research Interests}
-    \begin{itemize}[leftmargin=0.15in, label={}]
-    \small{\item{
-     \textbf{Substantive: }{Targeting and Personalization, Influencer and Creator Economy}}
-     \vspace{-5pt}
-     \item{
-     \textbf{Methodology: }{Machine Learning, Causal Inference, Optimization, Game Theory}}
-     }
- \end{itemize}
+\begin{cvblock}
+\textbf{Substantive:} Targeting and Personalization, Influencer and Creator Economy\\[4pt]
+\textbf{Methodology:} Machine Learning, Causal Inference, Optimization, Game Theory
+\end{cvblock}
 
-\section{Working Paper}
-    \resumeSubHeadingListStart
-    \resumeSubheading
-      {Targeting with Operational Constraints}{}
-      {with George Gui and Eva Ascarza, \textit{Job Market Paper}}{}
-    \resumeSubheading
-      {Policy-Aware Sampling: Prioritizing Consequential Customers for Optimized Targeting Policies}{}
-      {with Eva Ascarza and Oded Netzer, Invite Revision at \textit{Journal of Marketing Research}}{}
-    \resumeSubheading
-      {\parbox{\linewidth}{Dual Monetization on Creator Platforms: The Interplay Between Advertising Revenue and Brand Sponsorship}\vspace{1mm}}{}
-  {with Kinshuk Jerath}{}
-  \resumeSubHeadingListEnd
-    
-\section{Work in Progress}
-    \resumeSubHeadingListStart
-       \resumeSubheading
-      {Combining Experimental Data and LLM-Simulated Data To Improve Targeting Efficiency}{}
-      {with George Gui}{}
-      % \resumeSubheading
-      % {When Retention Backfires: Evidence from Gaming Data}{}
-      % {w/ Oded Netzer, Eva Ascarza}{}
-    % \resumeSubheading
-    %   {Leveraging Longitudinal Information for Targeting}{}
-    %   {w/ Oded Netzer, Eva Ascarza}{}
-  \resumeSubHeadingListEnd
+%---- WORKING PAPERS ----
+\section{Working Papers}
+\begin{enumerate}[leftmargin=0.55in, label=\arabic*., itemsep=10pt, topsep=4pt, parsep=0pt]
 
+\item \textbf{Targeting with Operational Constraints.}\\
+Yi-Wen Chen, George Gui, and Eva Ascarza.\\
+\textit{Job Market Paper.}
+
+\item \textbf{Policy-Aware Sampling: Prioritizing Consequential Customers for Optimized Targeting Policies.}\\
+Yi-Wen Chen, Eva Ascarza, and Oded Netzer.\\
+Conditionally Accepted at \textit{Journal of Marketing Research}.
+
+\item \textbf{Dual Monetization on Creator Platforms: The Interplay Between Advertising Revenue and Brand Sponsorship.}\\
+Yi-Wen Chen and Kinshuk Jerath.
+
+\end{enumerate}
+
+%---- WORK IN PROGRESS ----
+\section{Selected Work in Progress}
+\begin{enumerate}[leftmargin=0.55in, label=\arabic*., itemsep=10pt, topsep=4pt, parsep=0pt]
+
+\item\textbf{Adaptive Targeting in a Customer Changing Environment.}\\
+Hengxu Lin, Yi-Wen Chen, and Oded Netzer.
+
+\end{enumerate}
+
+%---- HONORS AND AWARDS ----
+\newpage
 \section{Honors and Awards}
-  \resumeSubHeadingListStart
-  \resumeAwardheading
-     {\textbf{Government Scholarships for Study Abroad (GSSA)}, Ministry of Education, Taiwan}{2025-2027}
-  \resumeAwardheading
-     {\textbf{ISMS Marketing Science Doctoral Consortium Fellow}}{2025}
-  \resumeAwardheading
-     {\textbf{Luxury Education Foundation Awards}, Columbia Business School}{2024}
-  \resumeAwardheading
-     {\textbf{Deming Center Doctoral Fellowship}, Columbia Business School}{2024}
-  \resumeAwardheading
-     {\textbf{Columbia Business School Doctoral Fellowship}, Columbia Business School}{2021-2026}
-  \resumeAwardheading
-     {\textbf{Dean's List}, National Taiwan University}{Fall 2012, Fall 2013}
+\begin{cvblock}
+Government Scholarships for Study Abroad (GSSA), Ministry of Education, Taiwan, 2025--2027.
 
-  \resumeSubHeadingListEnd
+\smallskip
+ISMS Marketing Science Doctoral Consortium Fellow, 2025.
 
+\smallskip
+Luxury Education Foundation Awards, Columbia Business School, 2024.
+
+\smallskip
+Deming Center Doctoral Fellowship, Columbia Business School, 2024.
+
+\smallskip
+Columbia Business School Doctoral Fellowship, 2021--2026.
+
+\smallskip
+Dean's List, National Taiwan University, Fall 2012, Fall 2013.
+\end{cvblock}
+
+%---- CONFERENCE PRESENTATIONS ----
 \section{Conference Presentations}
-  \resumeSubHeadingListStart
-    \resumeSubSubheading
-    {\quad ISMS Marketing Science Conference, Lisbon, Portugal}{Jun 2026}
-    \resumeSubSubheading
-    {\quad Conference on Artificial Intelligence, Machine Learning, and Business Analytics, New York, NY}{Dec 2025}
-    \resumeSubSubheading
-    {\quad Platform Doctoral Symposium, Boston, MA}{Oct 2025}
-    \resumeSubSubheading
-    {\quad ISMS Marketing Science Conference, Washington D.C.}{Jun 2025}
-    \resumeSubSubheading
-    {\quad University of Houston Doctoral Symposium, Houston, TX}{Apr 2025}
-    \resumeSubSubheading
-    {\quad Conference on Digital Experimentation (CODE@MIT), Boston, MA}{Oct 2024}
-      
+\begin{cvblock}
+\textbf{2026:} ISMS Marketing Science Conference.
 
+\smallskip
+\textbf{2025:} Conference on Artificial Intelligence, Machine Learning, and Business Analytics;
+Platform Doctoral Symposium; ISMS Marketing Science Conference;
+University of Houston Doctoral Symposium.
 
+\smallskip
+\textbf{2024:} Conference on Digital Experimentation (CODE@MIT).
+\end{cvblock}
 
-  \resumeSubHeadingListEnd
-
+%---- TEACHING EXPERIENCE ----
 \section{Teaching Experience}
-  \resumeSubHeadingListStart
-  \resumeteachingheading
-     {\textbf{Teaching Assistant}, Columbia Business School}{}
-     \resumeSubSubheading{\quad Analytical Models (PhD)}{Spring 2025}
-     \resumeSubSubheading{\quad Empirical Models (PhD)}{Spring 2025}
-    \resumeSubSubheading{\quad Marketing Analytics}{Fall 2024, Fall 2025}
-    \resumeSubSubheading{\quad Digital Marketing}{Fall 2022}
-    \resumeSubSubheading{\quad Statistical Modeling and Decision Making}{Fall 2022}
-    \resumeSubSubheading{\quad Pricing Strategy}{Spring 2022, Spring 2023}
-  \resumeteachingheading
-     {\textbf{Teaching Assistant}, National Taiwan University}{}
-    \resumeSubSubheading{\quad Applied Statistics}{Fall 2016 - Spring 2018}
+\begin{cvblock}
+\cvsubsection{Columbia Business School} --- Teaching Assistant
 
-  \resumeSubHeadingListEnd
-  
-\section{Professional Experience}
-  \resumeSubHeadingListStart
-     \resumeSubheading
-      {Sinopac Securities Asia}{2019-2020}
-      {Data Scientist}{Taipei, Taiwan}
+\vspace{4pt}
+\begin{tabularx}{\linewidth}{Xr}
+Analytical Models (PhD) & Spring 2025 \\
+Empirical Models (PhD) & Spring 2025 \\
+Marketing Analytics & Fall 2024, Fall 2025 \\
+Digital Marketing & Fall 2022 \\
+Statistical Modeling and Decision Making & Fall 2022 \\
+Pricing Strategy & Spring 2022, Spring 2023 \\
+\end{tabularx}
 
-  \resumeSubHeadingListEnd
-  
-\section{PhD Courseworks}
+\cvsubsection{National Taiwan University} --- Teaching Assistant
 
-\resumeSubHeadingListStart
-    \resumeteachingheading
-    {\textbf{\large Marketing}, Columbia Business School}{}
-    \resumeSubSubheading
-    {\quad Empirical Models}{Oded Netzer}
-    \resumeSubSubheading
-    {\quad Mathematical Models in Marketing}{Rajeev Kohli}
-    \resumeSubSubheading
-    {\quad Analytical Models}{Kinshuk Jerath}
-    \resumeSubSubheading
-    {\quad Consumer Behavior I}{Michel Pham \& Bernd Schmitt}
-    \resumeSubSubheading
-    {\quad Consumer Behavior II}{Eric Johnson}
-    \resumeSubSubheading
-    {\quad Marketing, Decisions, and Methods}{Don Lehmann}
-    \vspace{-10pt}
-    \resumeteachingheading
-    {\textbf{\large Economics}, Columbia University}{}
-      \resumeSubSubheading
-      {\quad Introduction to Econometrics I}{Joss Montiel Olea \& Sok Lee}
-      \resumeSubSubheading
-      {\quad Introduction to Econometrics II}{Serena Ng \& Bernard Salanie}
-      \resumeSubSubheading
-      {\quad Econometrics IV}{Sok Lee}
-      \resumeSubSubheading
-      {\quad Economic Analysis I, II}{Geoffrey Heal}
-      \resumeSubSubheading
-      {\quad Industrial Organization I}{Gautam Gowrisankaran}
-      \resumeSubSubheading
-      {\quad Industrial Organization II}{Pietro Tebaldi}
-      \vspace{-10pt}
-    \resumeteachingheading
-    {\textbf{\large Economics}, National Taiwan University}{}
-      \resumeSubSubheading
-      {\quad Econometric Theory}{Yi-Ting Chen}
-      \resumeSubSubheading
-      {\quad Microeconomic Theory}{Hendrick Rommeswinkel \& Po-Han Fong}
-      \resumeSubSubheading
-      {\quad Macroeconomic Theory}{Yi-Chan Tsai \& Pei-Ju Liao}
-      \resumeSubSubheading
-      {\quad Applied Microeconomics I, II}{Ming-Jen Lin}
-    \vspace{-10pt}
-    \resumeteachingheading
-    {\textbf{\large Statistics and Computer Science}, Columbia University}{}
-    \resumeSubSubheading
-    {\quad Applied Causality}{David Blei}
-    \resumeSubSubheading
-    {\quad Foundation of Graphical Models (Probabilistic Machine Learning)}{David Blei}
-    \resumeSubSubheading
-    {\quad Bayesian Computation and Modeling}{Asim Ansari}
-    \resumeSubSubheading
-    {\quad Applied Multivariate Statistics}{Kamel Jedidi}
- \resumeSubHeadingListEnd
+\vspace{4pt}
+\begin{tabularx}{\linewidth}{Xr}
+Applied Statistics & Fall 2016--Spring 2018 \\
+\end{tabularx}
+\end{cvblock}
 
+%---- INDUSTRY EXPERIENCE ----
+\section{Industry Experience}
+\begin{cvblock}
+\textbf{Sinopac Securities Asia}, Data Scientist, 2019--2020.
+\end{cvblock}
+
+%---- PHD COURSEWORK ----
+\newpage
+\section{PhD Coursework}
+\begin{cvblock}
+\cvsubsection{Marketing, Columbia Business School}
+
+\vspace{4pt}
+\begin{tabularx}{\linewidth}{Xr}
+Empirical Models & Oded Netzer \\
+Mathematical Models in Marketing & Rajeev Kohli \\
+Analytical Models & Kinshuk Jerath \\
+Consumer Behavior I & Michel Pham \& Bernd Schmitt \\
+Consumer Behavior II & Eric Johnson \\
+Marketing, Decisions, and Methods & Don Lehmann \\
+Bayesian Computation and Modeling & Asim Ansari \\
+Applied Multivariate Statistics & Kamel Jedidi \\
+\end{tabularx}
+
+\cvsubsection{Economics, Columbia University}
+
+\vspace{4pt}
+\begin{tabularx}{\linewidth}{Xr}
+Introduction to Econometrics I & Joss Montiel Olea \& Sok Lee \\
+Introduction to Econometrics II & Serena Ng \& Bernard Salanie \\
+Econometrics IV & Sok Lee \\
+Economic Analysis I, II & Geoffrey Heal \\
+Industrial Organization I & Gautam Gowrisankaran \\
+Industrial Organization II & Pietro Tebaldi \\
+\end{tabularx}
+
+\cvsubsection{Economics, National Taiwan University}
+
+\vspace{4pt}
+\begin{tabularx}{\linewidth}{Xr}
+Econometric Theory & Yi-Ting Chen \\
+Microeconomic Theory & Hendrick Rommeswinkel \& Po-Han Fong \\
+Macroeconomic Theory & Yi-Chan Tsai \& Pei-Ju Liao \\
+Applied Microeconomics I, II & Ming-Jen Lin \\
+\end{tabularx}
+
+\cvsubsection{Statistics and Computer Science, Columbia University}
+
+\vspace{4pt}
+\begin{tabularx}{\linewidth}{Xr}
+Applied Causality & David Blei \\
+Foundation of Graphical Models (Probabilistic Machine Learning) & David Blei \\
+\end{tabularx}
+\end{cvblock}
+
+%---- SKILLS ----
 \section{Skills}
- \begin{itemize}[leftmargin=0.15in, label={}]
-    \small{\item{
-     \textbf{Programming Language:}{ Python, SQL, R, Stan, Mathematica}}
-     \vspace{-5pt}
-     \item{
-     \textbf{Statistical Software:}{ STATA}}
-     \vspace{-5pt}
-     \item{
-     \textbf{Other Computer Skills:}{ Microsoft Office, \LaTeX, Google BigQuery, Git}}
-     \vspace{-5pt}
-     \item{
-     \textbf{Language:}{ Mandarin(Native), English(Fluent)}}}
- \end{itemize}
- 
-% \section{References}
+\begin{cvblock}
+\textbf{Programming:} Python, R, Mathematica, SQL, STATA, Stan\\[4pt]
+\textbf{Languages:} Mandarin (Native), English (Fluent)
+\end{cvblock}
 
-% \begin{minipage}[t]{0.48\textwidth}
-% \textbf{Oded Netzer (Co-advisor)} \\
-% Arthur J. Samberg Professor of Business \\
-% Columbia University \\
-% Email: onetzer@gsb.columbia.edu
-% \end{minipage}%
-% \hfill%
-% \begin{minipage}[t]{0.48\textwidth}
-% \textbf{George Gui (Co-advisor)} \\
-% Assistant Professor of Marketing \\
-% Columbia University \\
-% Email: zg2467@gsb.columbia.edu
-% \end{minipage}
+%---- REFERENCES ----
+\newpage
+\section{References}
+\begin{cvblock}
+\begin{minipage}[t]{0.46\textwidth}
+\textbf{Oded Netzer} (Co-advisor)\\
+Arthur J. Samberg Professor of Business\\
+Columbia University\\
+\href{mailto:onetzer@gsb.columbia.edu}{onetzer@gsb.columbia.edu}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.46\textwidth}
+\textbf{George Gui} (Co-advisor)\\
+Assistant Professor of Marketing\\
+Columbia University\\
+\href{mailto:zg2467@gsb.columbia.edu}{zg2467@gsb.columbia.edu}
+\end{minipage}
 
-% \vspace{1em}
+\vspace{1em}
 
-% \begin{minipage}[t]{0.48\textwidth}
-% \textbf{Eva Ascarza} \\
-% Professor of Business Administration \\
-% Harvard University \\
-% Email: eascarza@hbs.edu
-% \end{minipage}%
-% \hfill%
-% \begin{minipage}[t]{0.48\textwidth}
-% \textbf{Kinshuk Jerath} \\
-% Arthur F. Burns Professor of Free and Competitive Enterprise, Professor of Marketing \\
-% Columbia University \\
-% Email: kj2323@columbia.edu
-% \end{minipage}
+\begin{minipage}[t]{0.46\textwidth}
+\textbf{Eva Ascarza}\\
+Professor of Business Administration\\
+Harvard University\\
+\href{mailto:eascarza@hbs.edu}{eascarza@hbs.edu}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.46\textwidth}
+\textbf{Kinshuk Jerath}\\
+Arthur F. Burns Professor of Free and Competitive Enterprise\\
+Columbia University\\
+\href{mailto:kj2323@columbia.edu}{kj2323@columbia.edu}
+\end{minipage}
+\end{cvblock}
 
-%-------------------------------------------
 \end{document}

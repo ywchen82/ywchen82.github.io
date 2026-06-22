@@ -1,12 +1,11 @@
 ---
-layout: cv
+layout: page
 permalink: /cv/
 title: CV
 nav: true
 nav_order: 4
-cv_pdf: /assets/pdf/CV_Penny_Chen.pdf
-cv_format: rendercv # options: rendercv, jsonresume
-description: Download my CV as a PDF using the button above.
-toc:
-  sidebar: left
 ---
+
+<div style="width: 100%; height: 85vh;">
+  <iframe src="{{ '/assets/pdf/CV_Penny_Chen.pdf' | relative_url }}" width="100%" height="100%" style="border: none;"></iframe>
+</div>

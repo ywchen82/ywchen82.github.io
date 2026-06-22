@@ -4,6 +4,136 @@
 
 @use "variables" as v;
 
+// Research page — minimal academic layout
+.research-page {
+  // 1. Category heading — largest & boldest
+  h3 {
+    font-size: 1.35rem;
+    font-weight: 700;
+    margin-top: 2.2rem;
+    margin-bottom: 1rem;
+    color: var(--global-text-color);
+  }
+
+  .paper-list {
+    padding-left: 1.4rem;
+    margin-bottom: 0;
+
+    li {
+      margin-bottom: 1.6rem;
+      line-height: 1.6;
+    }
+  }
+
+  // 2. Paper title — second
+  .paper-title {
+    font-size: 1.05rem;
+    font-weight: 600;
+    margin-bottom: 0.15rem;
+    color: var(--global-text-color);
+
+    a {
+      font-size: 0.88rem;
+      font-weight: 400;
+      text-decoration: none;
+      color: var(--global-theme-color);
+      &:hover { text-decoration: underline; }
+    }
+  }
+
+  // 3. Author list — self name third, co-authors fourth
+  .paper-authors {
+    font-size: 0.9rem;
+    margin-bottom: 0.15rem;
+    color: var(--global-text-color);
+
+    a {
+      font-size: 0.9rem;
+      text-decoration: none;
+      color: var(--global-theme-color);
+      &:hover { text-decoration: underline; }
+    }
+  }
+
+  // 4. Status & abstract — base level
+  .paper-status {
+    font-size: 0.88rem;
+    color: var(--global-text-color);
+    margin-bottom: 0.3rem;
+  }
+
+  // Teaching table
+  .course-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.8rem 0;
+    display: block;
+
+    li {
+      display: block;
+      padding: 0.2rem 0;
+      width: 100%;
+    }
+
+    .course-name {
+      display: block;
+      font-weight: 400;
+      font-size: 1rem;
+      color: white;
+      margin-bottom: 0;
+    }
+
+    .course-prof {
+      display: block;
+      font-size: 0.9rem;
+      color: var(--global-text-color);
+      margin-bottom: 0;
+    }
+
+    .course-meta {
+      display: block;
+      font-size: 0.88rem;
+      color: var(--global-text-color-light);
+    }
+  }
+
+  details {
+    margin-top: 0.4rem;
+
+    summary {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+      cursor: pointer;
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: var(--global-text-color);
+      user-select: none;
+      list-style: none;
+
+      &::-webkit-details-marker { display: none; }
+      &::before {
+        content: "▶";
+        font-size: 0.65rem;
+        transition: transform 0.2s ease;
+        display: inline-block;
+      }
+    }
+
+    &[open] summary::before {
+      transform: rotate(90deg);
+    }
+
+    p {
+      margin-top: 0.6rem;
+      font-size: 0.9rem;
+      line-height: 1.65;
+      color: var(--global-text-color);
+      text-align: justify;
+    }
+  }
+}
+
 .publications {
   margin-top: 2rem;
 

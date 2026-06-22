@@ -17,7 +17,7 @@ keywords: quantitative marketing, targeting, causal inference, machine learning,
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
 icon: 🎓 # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
 
-url: https://yiwenpenny.github.io # the base hostname & protocol for your site — update with your GitHub username
+url: https://ywchen82.github.io # the base hostname & protocol for your site — update with your GitHub username
 baseurl: # leave blank for root
 last_updated: false # set to true if you want to display last updated in the footer
 impressum_path: # set to path to include impressum link in the footer, use the same path as permalink in a page, helps to conform with EU GDPR
@@ -199,6 +199,7 @@ exclude:
   - package.json
   - package-lock.json
   - _pages/about_einstein.md
+  - assets/jupyter/
   - purgecss.config.js
   - README.md
   - readme_preview/
@@ -216,7 +217,7 @@ plugins:
   - jekyll-feed
   - jekyll-get-json
   - jekyll-imagemagick
-  - jekyll-jupyter-notebook
+  # - jekyll-jupyter-notebook
   - jekyll-link-attributes
   - jekyll-minifier
   - jekyll-paginate-v2
@@ -299,8 +300,7 @@ scholar:
   details_link: Details
 
   query: "@*"
-  group_by: year
-  group_order: descending
+  group_by: none
 
 # Display different badges withs stats for your publications
 # Customize badge behavior in _layouts/bib.liquid
@@ -315,6 +315,8 @@ filtered_bibtex_keywords:
   [
     abbr,
     abstract,
+    category,
+    order,
     additional_info,
     altmetric,
     annotation,
@@ -346,7 +348,7 @@ max_author_limit: 3 # leave blank to always show all authors
 more_authors_animation_delay: 10 # more authors are revealed on click using animation; smaller delay means faster animation
 
 # Enables publication thumbnails. If disabled, none of the publications will display thumbnails, even if specified in the bib entry.
-enable_publication_thumbnails: true
+enable_publication_thumbnails: false
 
 # -----------------------------------------------------------------------------
 # Jekyll Link Attributes
