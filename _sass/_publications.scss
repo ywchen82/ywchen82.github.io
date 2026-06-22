@@ -37,7 +37,9 @@
       font-weight: 400;
       text-decoration: none;
       color: var(--global-theme-color);
-      &:hover { text-decoration: underline; }
+      &:hover {
+        text-decoration: underline;
+      }
     }
   }
 
@@ -51,7 +53,9 @@
       font-size: 0.9rem;
       text-decoration: none;
       color: var(--global-theme-color);
-      &:hover { text-decoration: underline; }
+      &:hover {
+        text-decoration: underline;
+      }
     }
   }
 
@@ -111,7 +115,9 @@
       user-select: none;
       list-style: none;
 
-      &::-webkit-details-marker { display: none; }
+      &::-webkit-details-marker {
+        display: none;
+      }
       &::before {
         content: "▶";
         font-size: 0.65rem;
