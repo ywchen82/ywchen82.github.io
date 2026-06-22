@@ -1,0 +1,289 @@
+\documentclass[12pt, letterpaper]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage{palatino}
+\usepackage[top=0.85in, bottom=1in, left=1in, right=1in, headheight=14pt]{geometry}
+\usepackage{fancyhdr}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{microtype}
+\usepackage{titlesec}
+
+% Running header: name left, page number right, no rule
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\textit{Yi-Wen (Penny) Chen}}
+\fancyhead[R]{\thepage}
+\renewcommand{\headrulewidth}{0pt}
+
+% First page: no header
+\fancypagestyle{firstpage}{%
+  \fancyhf{}%
+  \renewcommand{\headrulewidth}{0pt}%
+}
+
+% Section headings: bold, large, with rule beneath
+\titleformat{\section}
+  {\large\bfseries}
+  {}{0em}{}
+  [\vspace{2pt}\hrule\vspace{0pt}]
+\titlespacing*{\section}{0pt}{14pt}{8pt}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+
+% Subsection heading within cvblock
+\newcommand{\cvsubsection}[1]{\vspace{6pt}\noindent{\bfseries #1}}
+
+% Indented content block (mirrors David Huang's indented sections)
+\newenvironment{cvblock}{%
+  \begin{list}{}{%
+    \setlength{\leftmargin}{0.35in}%
+    \setlength{\rightmargin}{0pt}%
+    \setlength{\topsep}{2pt}%
+    \setlength{\parsep}{0pt}%
+    \setlength{\itemsep}{0pt}%
+    \setlength{\partopsep}{0pt}%
+  }%
+  \item[]%
+}{%
+  \end{list}%
+}
+
+%-------------------------------------------
+\begin{document}
+\thispagestyle{firstpage}
+
+%---- NAME + LAST UPDATED ----
+\begin{minipage}[b]{0.70\textwidth}
+{\LARGE\bfseries Yi-Wen (Penny) Chen}
+\end{minipage}%
+\hfill
+\begin{minipage}[b]{0.28\textwidth}\raggedleft
+\footnotesize Last updated: June 2026
+\end{minipage}
+
+\vspace{16pt}
+
+%---- CONTACT ----
+\begin{minipage}[t]{0.55\textwidth}
+Marketing Division\\
+Columbia Business School\\
+3022 Broadway, New York, NY 10027
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.40\textwidth}\raggedright
+\href{mailto:YChen26@gsb.columbia.edu}{YChen26@gsb.columbia.edu}\\[2pt]
+\href{https://ywchen82.github.io}{ywchen82.github.io}
+\end{minipage}
+
+\vspace{4pt}
+
+%---- EDUCATION ----
+\section{Education}
+\begin{cvblock}
+\textbf{Columbia Business School}, New York, NY, USA\\
+Ph.D., Marketing, 2021--2027 (expected).\\
+M.Phil., 2024.
+
+\medskip
+\textbf{National Taiwan University}, Taipei, Taiwan\\
+M.A., Economics, 2019.
+
+\medskip
+\textbf{National Taiwan University}, Taipei, Taiwan\\
+LL.B., Law, Minor in Political Science (International Relation Track), 2016.
+\end{cvblock}
+
+%---- RESEARCH INTERESTS ----
+\section{Research Interests}
+\begin{cvblock}
+\textbf{Substantive:} Targeting and Personalization, Influencer and Creator Economy\\[4pt]
+\textbf{Methodology:} Machine Learning, Causal Inference, Optimization, Game Theory
+\end{cvblock}
+
+%---- WORKING PAPERS ----
+\section{Working Papers}
+\begin{enumerate}[leftmargin=0.55in, label=\arabic*., itemsep=10pt, topsep=4pt, parsep=0pt]
+
+\item \textbf{Targeting with Operational Constraints.}\\
+Yi-Wen Chen, George Gui, and Eva Ascarza.\\
+\textit{Job Market Paper.}
+
+\item \textbf{Policy-Aware Sampling: Prioritizing Consequential Customers for Optimized Targeting Policies.}\\
+Yi-Wen Chen, Eva Ascarza, and Oded Netzer.\\
+Conditionally Accepted at \textit{Journal of Marketing Research}.
+
+\item \textbf{Dual Monetization on Creator Platforms: The Interplay Between Advertising Revenue and Brand Sponsorship.}\\
+Yi-Wen Chen and Kinshuk Jerath.
+
+\end{enumerate}
+
+%---- WORK IN PROGRESS ----
+\section{Selected Work in Progress}
+\begin{enumerate}[leftmargin=0.55in, label=\arabic*., itemsep=10pt, topsep=4pt, parsep=0pt]
+
+\item\textbf{Adaptive Targeting in a Customer Changing Environment.}\\
+Hengxu Lin, Yi-Wen Chen, and Oded Netzer.
+
+\end{enumerate}
+
+%---- HONORS AND AWARDS ----
+\newpage
+\section{Honors and Awards}
+\begin{cvblock}
+Government Scholarships for Study Abroad (GSSA), Ministry of Education, Taiwan, 2025--2027.
+
+\smallskip
+ISMS Marketing Science Doctoral Consortium Fellow, 2025.
+
+\smallskip
+Luxury Education Foundation Awards, Columbia Business School, 2024.
+
+\smallskip
+Deming Center Doctoral Fellowship, Columbia Business School, 2024.
+
+\smallskip
+Columbia Business School Doctoral Fellowship, 2021--2026.
+
+\smallskip
+Dean's List, National Taiwan University, Fall 2012, Fall 2013.
+\end{cvblock}
+
+%---- CONFERENCE PRESENTATIONS ----
+\section{Conference Presentations}
+\begin{cvblock}
+\textbf{2026:} ISMS Marketing Science Conference.
+
+\smallskip
+\textbf{2025:} Conference on Artificial Intelligence, Machine Learning, and Business Analytics;
+Platform Doctoral Symposium; ISMS Marketing Science Conference;
+University of Houston Doctoral Symposium.
+
+\smallskip
+\textbf{2024:} Conference on Digital Experimentation (CODE@MIT).
+\end{cvblock}
+
+%---- TEACHING EXPERIENCE ----
+\section{Teaching Experience}
+\begin{cvblock}
+\cvsubsection{Columbia Business School} --- Teaching Assistant
+
+\vspace{4pt}
+\begin{tabularx}{\linewidth}{Xr}
+Analytical Models (PhD) & Spring 2025 \\
+Empirical Models (PhD) & Spring 2025 \\
+Marketing Analytics & Fall 2024, Fall 2025 \\
+Digital Marketing & Fall 2022 \\
+Statistical Modeling and Decision Making & Fall 2022 \\
+Pricing Strategy & Spring 2022, Spring 2023 \\
+\end{tabularx}
+
+\cvsubsection{National Taiwan University} --- Teaching Assistant
+
+\vspace{4pt}
+\begin{tabularx}{\linewidth}{Xr}
+Applied Statistics & Fall 2016--Spring 2018 \\
+\end{tabularx}
+\end{cvblock}
+
+%---- INDUSTRY EXPERIENCE ----
+\section{Industry Experience}
+\begin{cvblock}
+\textbf{Sinopac Securities Asia}, Data Scientist, 2019--2020.
+\end{cvblock}
+
+%---- PHD COURSEWORK ----
+\newpage
+\section{PhD Coursework}
+\begin{cvblock}
+\cvsubsection{Marketing, Columbia Business School}
+
+\vspace{4pt}
+\begin{tabularx}{\linewidth}{Xr}
+Empirical Models & Oded Netzer \\
+Mathematical Models in Marketing & Rajeev Kohli \\
+Analytical Models & Kinshuk Jerath \\
+Consumer Behavior I & Michel Pham \& Bernd Schmitt \\
+Consumer Behavior II & Eric Johnson \\
+Marketing, Decisions, and Methods & Don Lehmann \\
+Bayesian Computation and Modeling & Asim Ansari \\
+Applied Multivariate Statistics & Kamel Jedidi \\
+\end{tabularx}
+
+\cvsubsection{Economics, Columbia University}
+
+\vspace{4pt}
+\begin{tabularx}{\linewidth}{Xr}
+Introduction to Econometrics I & Joss Montiel Olea \& Sok Lee \\
+Introduction to Econometrics II & Serena Ng \& Bernard Salanie \\
+Econometrics IV & Sok Lee \\
+Economic Analysis I, II & Geoffrey Heal \\
+Industrial Organization I & Gautam Gowrisankaran \\
+Industrial Organization II & Pietro Tebaldi \\
+\end{tabularx}
+
+\cvsubsection{Economics, National Taiwan University}
+
+\vspace{4pt}
+\begin{tabularx}{\linewidth}{Xr}
+Econometric Theory & Yi-Ting Chen \\
+Microeconomic Theory & Hendrick Rommeswinkel \& Po-Han Fong \\
+Macroeconomic Theory & Yi-Chan Tsai \& Pei-Ju Liao \\
+Applied Microeconomics I, II & Ming-Jen Lin \\
+\end{tabularx}
+
+\cvsubsection{Statistics and Computer Science, Columbia University}
+
+\vspace{4pt}
+\begin{tabularx}{\linewidth}{Xr}
+Applied Causality & David Blei \\
+Foundation of Graphical Models (Probabilistic Machine Learning) & David Blei \\
+\end{tabularx}
+\end{cvblock}
+
+%---- SKILLS ----
+\section{Skills}
+\begin{cvblock}
+\textbf{Programming:} Python, R, Mathematica, SQL, STATA, Stan\\[4pt]
+\textbf{Languages:} Mandarin (Native), English (Fluent)
+\end{cvblock}
+
+%---- REFERENCES ----
+\newpage
+\section{References}
+\begin{cvblock}
+\begin{minipage}[t]{0.46\textwidth}
+\textbf{Oded Netzer} (Co-advisor)\\
+Arthur J. Samberg Professor of Business\\
+Columbia University\\
+\href{mailto:onetzer@gsb.columbia.edu}{onetzer@gsb.columbia.edu}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.46\textwidth}
+\textbf{George Gui} (Co-advisor)\\
+Assistant Professor of Marketing\\
+Columbia University\\
+\href{mailto:zg2467@gsb.columbia.edu}{zg2467@gsb.columbia.edu}
+\end{minipage}
+
+\vspace{1em}
+
+\begin{minipage}[t]{0.46\textwidth}
+\textbf{Eva Ascarza}\\
+Professor of Business Administration\\
+Harvard University\\
+\href{mailto:eascarza@hbs.edu}{eascarza@hbs.edu}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.46\textwidth}
+\textbf{Kinshuk Jerath}\\
+Arthur F. Burns Professor of Free and Competitive Enterprise\\
+Columbia University\\
+\href{mailto:kj2323@columbia.edu}{kj2323@columbia.edu}
+\end{minipage}
+\end{cvblock}
+
+\end{document}
