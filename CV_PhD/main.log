@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.10.14)  17 JUN 2026 13:01
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.10.14)  14 JUL 2026 17:44
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**"/Users/yc3965/Dropbox/Personal Website/CV_PhD/main.tex"
-(/Users/yc3965/Dropbox/Personal Website/CV_PhD/main.tex
+**CV_PhD/main.tex
+(./CV_PhD/main.tex
 LaTeX2e <2020-10-01> patch level 4
 L3 programming layer <2021-02-18>
 (/usr/local/texlive/2021/texmf-dist/tex/latex/base/article.cls
@@ -272,7 +272,7 @@ File: l3backend-pdftex.def 2021-03-18 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count271
 \l__pdf_internal_box=\box51
 )
-(/Users/yc3965/Dropbox/Personal Website/CV_PhD/main.aux)
+(CV_PhD/main.aux)
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 56.
@@ -344,8 +344,7 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 56.
 LaTeX Info: Redefining \pageref on input line 56.
 LaTeX Info: Redefining \nameref on input line 56.
- (/Users/yc3965/Dropbox/Personal Website/CV_PhD/main.out)
-(/Users/yc3965/Dropbox/Personal Website/CV_PhD/main.out)
+ (CV_PhD/main.out) (CV_PhD/main.out)
 \@outlinefile=\write3
 \openout3 = `main.out'.
 
@@ -393,24 +392,23 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
 
-[4] (/Users/yc3965/Dropbox/Personal Website/CV_PhD/main.aux)
+[4] (CV_PhD/main.aux)
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 9E58418EF463EB9E94B2BB46CFC170E6;1385.
  ) 
 Here is how much of TeX's memory you used:
  10197 strings out of 478994
- 156661 string characters out of 5858183
+ 156154 string characters out of 5858183
  492701 words of memory out of 5000000
  27495 multiletter control sequences out of 15000+600000
  420009 words of font info for 85 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 71i,10n,74p,264b,330s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 71i,10n,74p,223b,330s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
 exlive/2021/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/local/texlive/
 2021/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2021/te
 xmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on "/Users/yc3965/Dropbox/Personal Website/CV_PhD/main.pdf" (4 p
-ages, 63917 bytes).
+Output written on CV_PhD/main.pdf (4 pages, 63941 bytes).
 PDF statistics:
  97 PDF objects out of 1000 (max. 8388607)
  87 compressed objects within 1 object stream
